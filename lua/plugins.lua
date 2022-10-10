@@ -18,6 +18,12 @@ Plug 'nvim-tree/nvim-tree.lua'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+Plug 'tpope/vim-surround'
+
+Plug 'm4xshen/autoclose.nvim'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
 colorscheme onedark
@@ -41,3 +47,14 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+
+-- blankline
+require("indent_blankline").setup({
+    -- for example, context is off by default, use this to turn it on
+    show_end_of_line = true,
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+})
+
