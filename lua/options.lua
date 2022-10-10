@@ -3,15 +3,16 @@ vim.opt.number = true
 vim.opt.numberwidth = 4
 vim.opt.backspace=indent,eol,start
 
+vim.opt.hidden = true
+
 -- Autoread (reload files changed outside of vim)
 vim.opt.autoread = true
 
 -- Turn on list characters
 vim.opt.list = true
 vim.opt.listchars:append "tab:→\ "
--- vim.opt.listchars:append "eol:¬"
+vim.opt.listchars:append "eol:¬"
 vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
 
 -- Wrap
 vim.opt.wrap = true
@@ -40,8 +41,6 @@ vim.opt.showmatch = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
--- Leader
-vim.g.mapleader = " "
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded = 1

@@ -16,6 +16,8 @@ Plug 'tpope/vim-commentary'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
+Plug 'akinsho/bufferline.nvim'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'tpope/vim-surround'
@@ -24,6 +26,9 @@ Plug 'm4xshen/autoclose.nvim'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
 call plug#end()
 
 colorscheme onedark
@@ -31,9 +36,10 @@ colorscheme onedark
 
 -- Plugins settings
 require("nvim-tree").setup({
+  open_on_setup = true,
   sort_by = "name",
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     mappings = {
       list = {
         { key = "u", action = "dir_up" },
@@ -58,3 +64,6 @@ require("indent_blankline").setup({
     show_current_context_start = true,
 })
 
+
+vim.opt.termguicolors = true
+require("bufferline").setup{}
