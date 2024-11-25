@@ -7,7 +7,9 @@ return {
 		-- add any opts here
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-	build = "make",
+	build = package.config:sub(1, 1) == "\\"
+			and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+		or "make",
 	-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
