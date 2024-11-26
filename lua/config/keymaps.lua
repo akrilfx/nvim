@@ -3,5 +3,5 @@
 -- Add any additional keymaps here
 
 -- Buffer
-vim.keymap.set("n", "<Tab>", "<cmd>BufferLineMoveNext<cr>")
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineMovePrev<cr>")
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>")

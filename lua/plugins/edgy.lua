@@ -1,5 +1,6 @@
 return {
 	"folke/edgy.nvim",
+	enabled = false,
 	event = "VeryLazy",
 	keys = {
 		{
@@ -17,7 +18,7 @@ return {
 			bottom = {
 				{
 					ft = "toggleterm",
-					size = { height = 0.4 },
+					size = { height = 0.2 },
 					filter = function(buf, win)
 						return vim.api.nvim_win_get_config(win).relative == ""
 					end,
@@ -46,9 +47,9 @@ return {
 				{ title = "Neotest Summary", ft = "neotest-summary" },
 				-- "neo-tree",
 			},
-			right = {
-				{ title = "Grug Far", ft = "grug-far", size = { width = 0.4 } },
-			},
+			-- right = {
+			-- 	{ title = "Grug Far", ft = "grug-far", size = { width = 0.4 } },
+			-- },
 			keys = {
 				-- increase width
 				["<c-Right>"] = function(win)

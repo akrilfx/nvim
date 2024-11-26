@@ -2,6 +2,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
+	lazy = true,
 	opts = function()
 		return {
 			--[[add your custom lualine config here]]
