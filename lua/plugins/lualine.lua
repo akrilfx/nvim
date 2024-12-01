@@ -1,11 +1,12 @@
--- the opts function can also be used to change the default opts:
-return {
-	"nvim-lualine/lualine.nvim",
-	event = "VeryLazy",
-	lazy = true,
-	opts = function()
-		return {
-			--[[add your custom lualine config here]]
-		}
-	end,
+return
+{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+        require("lualine").setup()
+        options = {
+          icons_enabled = true,
+          theme = "auto",
+        }
+    end
 }
