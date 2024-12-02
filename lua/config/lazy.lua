@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup options
 require("config.options")
+require("config.keymaps")
 -- Lazy load plugins directory
 require("lazy").setup({
   spec = {
@@ -30,4 +31,10 @@ require("lazy").setup({
 
   -- automatically check for plugin updates
   checker = { enabled = true },
+
+  -- Custom keys for Lazy
+  keys = {
+    {"<Leader>l", "<cmd>Lazy<cr>", desc = "Show Lazy main UI"},
+    {"<Leader>u", "<cmd>Lazy update<cr>", desc = "Update Lazy"},
+  }
 })
