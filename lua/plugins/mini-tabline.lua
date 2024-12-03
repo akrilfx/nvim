@@ -1,10 +1,9 @@
 return
 {
-    'echasnovski/mini.surround',
+    'echasnovski/mini.tabline',
+    enabled = false,
     version = false,
     event = "VeryLazy",
     opts = {
     },
-    config = true,
 }
-
