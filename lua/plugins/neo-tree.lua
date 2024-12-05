@@ -12,7 +12,8 @@ return
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   keys = {
-    {"<leader>n", "<cmd>Neotree filesystem reveal<cr>", desc = "Show Neotree filesystem on the left panel."}
+    -- {"<leader>n", "<cmd>Neotree filesystem reveal<cr>", desc = "Display Neotree"}
+    {"<leader>n", "<cmd>Neotree toggle<cr>", desc = "Neotree"}
   }
 }
 

@@ -31,10 +31,4 @@ require("lazy").setup({
 
   -- automatically check for plugin updates
   checker = { enabled = true },
-
-  -- Custom keys for Lazy
-  keys = {
-    {"<Leader>l", "<cmd>Lazy<cr>", desc = "Show Lazy main UI"},
-    {"<Leader>u", "<cmd>Lazy update<cr>", desc = "Update Lazy"},
-  }
 })
