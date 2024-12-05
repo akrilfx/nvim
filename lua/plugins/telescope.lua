@@ -24,6 +24,14 @@ return
       dependencies = { 'nvim-lua/plenary.nvim' },
       lazy = true,
       event = "VeryLazy",
+      opts = {
+        defaults = {
+            layout_strategy = "horizontal",
+            layout_config = { prompt_position = "top" },
+            sorting_strategy = "ascending",
+            winblend = 0,
+        },
+      },
       config = function()
         local telescope = require("telescope")
         local builtin = require("telescope.builtin")
