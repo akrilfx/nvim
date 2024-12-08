@@ -2,7 +2,7 @@ return {
 	-- Mason
 	{
 		"williamboman/mason.nvim",
-		lazy = false,
+		lazy = true,
 		config = function()
 			require("mason").setup()
 		end,
@@ -10,6 +10,7 @@ return {
 	-- Mason lspconfig
 	{
 		"williamboman/mason-lspconfig.nvim",
+        lazy = true,
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
@@ -22,6 +23,7 @@ return {
 	-- Nvim lspconfig (communication between Nvim and Language Server)
 	{
 		"neovim/nvim-lspconfig",
+        lazy = true,
 		dependencies = {
 			{
 				"SmiteshP/nvim-navbuddy",

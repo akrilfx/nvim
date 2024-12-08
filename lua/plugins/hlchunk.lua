@@ -1,5 +1,6 @@
 return {
 	"shellRaining/hlchunk.nvim",
+    lazy = true,
 	enabled = true,
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {

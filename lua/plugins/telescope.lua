@@ -11,6 +11,7 @@ return
     {
         "nvim-telescope/telescope-file-browser.nvim",
         lazy = true,
+        event = "VeryLazy",
         dependencies = {
         event = "VeryLazy",
           "nvim-telescope/telescope.nvim",

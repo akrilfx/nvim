@@ -1,7 +1,8 @@
 return
 {
     'echasnovski/mini.tabline',
-    enabled = false,
+    lazy = true,
+    enabled = true,
     version = false,
     event = "VeryLazy",
     opts = {
