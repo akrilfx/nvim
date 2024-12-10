@@ -7,6 +7,9 @@ vim.g.mapleader = ","
 -- Save
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Save current file" })
 
+-- Close buffer
+vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Buffer close"})
+
 -- Select All
 vim.keymap.set("n", "<leader>a", "ggVG<c-$>", { desc = "Select All" })
 
@@ -32,7 +35,8 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 vim.keymap.set("n", "<C-q>", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- Tab and Shift Tab
-vim.keymap.set("n",    "<Tab>",         ">>",  opts)
-vim.keymap.set("n",    "<S-Tab>",       "<<",  opts)
-vim.keymap.set("v",    "<Tab>",         ">gv", opts)
-vim.keymap.set("v",    "<S-Tab>",       "<gv", opts)
+-- vim.keymap.set("n",    "<Tab>",         ">>",  opts)
+-- vim.keymap.set("n",    "<S-Tab>",       "<<",  opts)
+-- vim.keymap.set("v",    "<Tab>",         ">gv", opts)
+-- vim.keymap.set("v",    "<S-Tab>",       "<gv", opts)
+

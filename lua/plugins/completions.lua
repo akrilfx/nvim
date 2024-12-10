@@ -1,4 +1,12 @@
 return {
+    -- cmp sources plugins
+    {
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+    },
 	{
 		"L3MON4D3/LuaSnip",
         lazy = true,
@@ -10,6 +18,7 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
         lazy = true,
+        event = "InsertEnter",
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
