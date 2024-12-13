@@ -2,12 +2,15 @@ return {
     {
         "mfussenegger/nvim-dap",
         lazy = true,
+        event = "VeryLazy",
         config = function()
             vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
         end
     },
     {
         "mfussenegger/nvim-dap-python",
+        lazy = true,
+        event = "VeryLazy",
         ft = "python",
         dependencies = {
             "mfussenegger/nvim-dap",
@@ -21,6 +24,8 @@ return {
     },
     {
         "rcarriga/nvim-dap-ui",
+        lazy = true,
+        event = "VeryLazy",
         dependencies = {
             "mfussenegger/nvim-dap",
             "nvim-neotest/nvim-nio",

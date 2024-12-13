@@ -2,6 +2,7 @@ return {
     -- None LS
     {
         "nvimtools/none-ls.nvim",
+        enabled = true,
         lazy = false,
         config = function()
             local null_ls = require("null-ls")
@@ -21,7 +22,8 @@ return {
     -- Mason
     {
         "williamboman/mason.nvim",
-        lazy = false,
+        lazy = true,
+        enabled = true,
         opts = {
             ensure_installed = {
                 -- Lua
@@ -43,12 +45,14 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         lazy = false,
+        enabled = true,
         config = true,
     },
     -- Nvim lspconfig (communication between Nvim and Language Server)
     {
         "neovim/nvim-lspconfig",
         lazy = false,
+        enabled = true,
         config = function()
             -- Capabilities
             local capabilities = vim.lsp.protocol.make_client_capabilities()
