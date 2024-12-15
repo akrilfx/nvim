@@ -21,7 +21,6 @@ return
 
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' },
         lazy = true,
         event = "VeryLazy",
@@ -36,13 +35,16 @@ return
         config = function()
             local telescope = require("telescope")
             local builtin = require("telescope.builtin")
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-            vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Telescope buffers' })
-            vim.keymap.set('n', '<leader>h', builtin.help_tags, { desc = 'Telescope help tags' })
 
-            vim.keymap.set('n', '<leader>tl', builtin.live_grep, { desc = 'Telescope live grep' })
-            vim.keymap.set('n', '<leader>tg', builtin.git_files, { desc = 'Telescope git files' })
-            vim.keymap.set('n', '<leader>tr', builtin.registers, { desc = 'Telescope registers' })
+            -- telescope.load_extension('fzf')
+
+            vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+            vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Buffers (Telescope)' })
+            vim.keymap.set('n', '<leader>h', builtin.help_tags, { desc = 'Help tags (Telescope)' })
+
+            vim.keymap.set('n', '<leader>tl', builtin.live_grep, { desc = 'Live grep (Telescope)' })
+            vim.keymap.set('n', '<leader>tg', builtin.git_files, { desc = 'Git files (Telescope)' })
+            vim.keymap.set('n', '<leader>tr', builtin.registers, { desc = 'Registers (Telescope)' })
             vim.keymap.set('n', '<leader>tt', "<cmd>Telescope treesitter<cr>", { desc = 'Telescope treesitter' })
             vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, { desc = 'Telescope LSP Document Symbols' })
 

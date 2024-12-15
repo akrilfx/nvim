@@ -1,29 +1,12 @@
 return {
-    -- None LS
-    {
-        "nvimtools/none-ls.nvim",
-        enabled = true,
-        lazy = false,
-        config = function()
-            local null_ls = require("null-ls")
-
-            null_ls.setup({
-                sources = {
-                    null_ls.builtins.code_actions.refactoring,
-
-                    null_ls.builtins.diagnostics.mypy,
-
-                    null_ls.builtins.formatting.stylua,
-                    null_ls.builtins.formatting.black,
-                },
-            })
-        end,
-    },
     -- Mason
     {
         "williamboman/mason.nvim",
         lazy = true,
         enabled = true,
+        keys = {
+            { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" },
+        },
         opts = {
             ensure_installed = {
                 -- Lua
@@ -41,6 +24,7 @@ return {
             require('mason').setup()
         end,
     },
+
     -- Mason lspconfig
     {
         "williamboman/mason-lspconfig.nvim",
@@ -48,6 +32,7 @@ return {
         enabled = true,
         config = true,
     },
+
     -- Nvim lspconfig (communication between Nvim and Language Server)
     {
         "neovim/nvim-lspconfig",
@@ -56,7 +41,6 @@ return {
         config = function()
             -- Capabilities
             local capabilities = vim.lsp.protocol.make_client_capabilities()
-            -- capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
             -- LSP Config
             local lspconfig = require("lspconfig")
@@ -97,7 +81,7 @@ return {
             local function desc(txt)
                 return { desc = "LSP " .. txt }
             end
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc="LSP Hover" })
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
 
             vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" })
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to definition" })
@@ -106,7 +90,6 @@ return {
             vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "LSP Show references" })
 
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code action" })
-            vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "LSP Code format" })
             vim.keymap.set("n", "<C-F>", vim.lsp.buf.format, { desc = "LSP Code format" })
         end,
     },

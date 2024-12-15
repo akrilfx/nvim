@@ -8,10 +8,10 @@ vim.g.mapleader = ","
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Save current file" })
 
 -- Close buffer
-vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Buffer close"})
+vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Buffer close" })
 
 -- Select All
-vim.keymap.set("n", "<leader>a", "ggVG<c-$>", { desc = "Select All" })
+vim.keymap.set("n", "<leader>A", "ggVG<c-$>", { desc = "Select All" })
 
 -- Lazy
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy Window" })
@@ -39,4 +39,3 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<cr>", { desc = "Quit All" })
 -- vim.keymap.set("n",    "<S-Tab>",       "<<",  opts)
 -- vim.keymap.set("v",    "<Tab>",         ">gv", opts)
 -- vim.keymap.set("v",    "<S-Tab>",       "<gv", opts)
-

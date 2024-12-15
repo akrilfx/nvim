@@ -36,6 +36,8 @@ return {
             { "z",         group = "fold" },
             { "<leader>c", group = "code" },
             { "<leader>d", group = "debug" },
+            { "<leader>f", group = "find" },
+            { "<leader>g", group = "git" },
             { "<leader>l", group = "lazy" },
             { "<leader>q", group = "quit/session" },
             { "<leader>t", group = "telescope" },
