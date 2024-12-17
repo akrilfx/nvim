@@ -3,6 +3,7 @@ return {
     {
         "williamboman/mason.nvim",
         lazy = true,
+        event = "VeryLazy",
         enabled = true,
         keys = {
             { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" },
@@ -28,7 +29,8 @@ return {
     -- Mason lspconfig
     {
         "williamboman/mason-lspconfig.nvim",
-        lazy = false,
+        lazy = true,
+        event = "VeryLazy",
         enabled = true,
         config = true,
     },
@@ -36,7 +38,8 @@ return {
     -- Nvim lspconfig (communication between Nvim and Language Server)
     {
         "neovim/nvim-lspconfig",
-        lazy = false,
+        lazy = true,
+        event = "VeryLazy",
         enabled = true,
         config = function()
             -- Capabilities

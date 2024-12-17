@@ -2,15 +2,15 @@ return {
     {
         "mfussenegger/nvim-dap",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufRead",
         config = function()
-            vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+            vim.fn.sign_define('DapBreakpoint', { text = '🛑', texthl = '', linehl = '', numhl = '' })
         end
     },
     {
         "mfussenegger/nvim-dap-python",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufRead",
         ft = "python",
         dependencies = {
             "mfussenegger/nvim-dap",
@@ -25,7 +25,7 @@ return {
     {
         "rcarriga/nvim-dap-ui",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufRead",
         dependencies = {
             "mfussenegger/nvim-dap",
             "nvim-neotest/nvim-nio",
@@ -45,8 +45,8 @@ return {
             end
 
             -- Keymap
-            vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { desc = "DAP Breakpoint"})
-            vim.keymap.set("n", "<leader>dpr", "<cmd>DapToggleBreakpoint<CR>", { desc = "DAP Breakpoint"})
+            vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { desc = "DAP Breakpoint" })
+            vim.keymap.set("n", "<leader>dpr", "<cmd>DapToggleBreakpoint<CR>", { desc = "DAP Breakpoint" })
 
             vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
             vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
