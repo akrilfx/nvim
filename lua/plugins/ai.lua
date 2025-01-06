@@ -1,8 +1,12 @@
 local function build_cmd()
     local cmd = nil
-    if vim.fn.has("win64") then
+    -- Windows
+    if vim.fn.has('win64') == 1 then
         cmd = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
-    else
+    end
+
+    -- MacOSX
+    if vim.fn.has('mac') == 1 then
         cmd = "make"
     end
     return cmd

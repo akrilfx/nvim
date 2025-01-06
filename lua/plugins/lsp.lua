@@ -80,6 +80,11 @@ return {
                 },
             })
 
+            -- Dart
+            lspconfig.dartls.setup({
+                -- cmd = { "/opt/homebrew/bin/dart", "language-server", "--protocol=lsp" },
+            })
+
             -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua
             local function desc(txt)
                 return { desc = "LSP " .. txt }
