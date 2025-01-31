@@ -17,7 +17,7 @@ return {
                         pane = 2,
                         section = "terminal",
                         -- cmd = "colorscript -e square",
-                        cmd = "curl 'wttr.in/Montpellier?0Q'",
+                        cmd = "curl \"wttr.in/Montpellier?0Q\"",
                         height = 5,
                         padding = 1,
                     },
