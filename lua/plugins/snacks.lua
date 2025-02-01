@@ -42,7 +42,7 @@ return {
                 },
 
             },
-
+            explore = { enabled = true },
             git = { enabled = true },
             gitbrowse = { enabled = true },
 
@@ -68,6 +68,7 @@ return {
 
         keys = {
             { "<leader>x",  function() Snacks.bufdelete() end,      desc = "Delete Buffer" },
+            { "<leader>e",  function() Snacks.explorer() end,       desc = "Explorer" },
             { "<leader>gB", function() Snacks.gitbrowse() end,      desc = "Git Browse" },
             { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
             { "<leader>lg", function() Snacks.lazygit() end,        desc = "Lazygit" },

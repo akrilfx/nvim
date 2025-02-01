@@ -9,7 +9,11 @@ return {
         return {
             flavour = "mocha",
             transparent_background = true,
-            color_overrides = { all = colors },
+            color_overrides = {
+                all = {
+                    text = "#ffffff",
+                },
+            },
             custom_highlights = function(colors)
                 return {
                     CurSearch = { bg = colors.yellow },
@@ -17,6 +21,22 @@ return {
                     DiffChanged = { fg = colors.yellow },
                 }
             end,
+            styles = {                   -- Handles the styles of general hi groups (see `:h highlight-args`):
+                comments = { "italic" }, -- Change the style of comments
+                conditionals = { "italic" },
+                loops = {},
+                functions = {},
+                keywords = {},
+                strings = {},
+                variables = {},
+                numbers = {},
+                booleans = {},
+                properties = {},
+                types = {},
+                operators = {},
+                -- miscs = {}, -- Uncomment to turn off hard-coded styles
+            },
+            default_integrations = true,
             integrations = {
                 cmp = true,
                 fidget = true,
@@ -61,4 +81,3 @@ return {
         }
     end,
 }
-
